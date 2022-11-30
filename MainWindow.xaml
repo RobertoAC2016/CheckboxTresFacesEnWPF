@@ -1,0 +1,33 @@
+﻿<Window x:Class="CheckboxWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckboxWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <Label FontSize="20">Veamos como usar los checkboxes con tres estados y manipulando imagenes</Label>
+        <Label Content="Selecciona los elementos de la lista" FontSize="25" Foreground="DarkRed"></Label>
+        <CheckBox Name="cball" FontSize="25" Content="Todos" 
+                  Margin="15"                       
+                  Checked="evento_all_Checked" 
+                  Unchecked="evento_all_Checked" 
+                  IsThreeState="True"
+                  ></CheckBox>
+        <DockPanel Margin="30 0 50 0">
+            <StackPanel>
+                <CheckBox Name="cbuno" FontSize="25" Content="Rojo" Margin="15" Checked="evento_Checked" Unchecked="evento_Checked"></CheckBox>
+                <CheckBox Name="cbdos" FontSize="25" Content="Verde" Margin="15" Checked="evento_Checked" Unchecked="evento_Checked"></CheckBox>
+                <CheckBox Name="cbtres" FontSize="25" Content="Azul" Margin="15" Checked="evento_Checked" Unchecked="evento_Checked"></CheckBox>
+            </StackPanel>
+            <StackPanel Margin="0 0 0 0">
+                <Grid>
+                    <Image Name="imuno" Width="200" Height="200" Source="D:\RAC\NET\CheckboxWPF\uno.png"></Image>
+                    <Image Name="imdos" Width="200" Height="200" Source="D:\RAC\NET\CheckboxWPF\dos.png"></Image>
+                    <Image Name="imtres" Width="200" Height="200" Source="D:\RAC\NET\CheckboxWPF\tres.png"></Image>
+                </Grid>
+            </StackPanel>
+        </DockPanel>
+    </StackPanel>
+</Window>
